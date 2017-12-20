@@ -1,0 +1,36 @@
+Screens:
+	Log in:
+		Email
+		Password
+		
+	Home:
+		Search:
+			People
+			Restaurants
+			Price
+			
+		Cont feed:
+			Review info
+			
+	Review Meal: - Call to Action button
+		Restaurant - search/add
+		Meal name
+       	Rating
+       	Price
+       	Pic - Optional
+       	Comment - Optional
+       	
+       Restaurant: - Search bar
+       	Meal reviews
+       	Tags
+       	
+       Profile Page: - Search bar (for others)
+       	Meal Reivews
+       	Profile picture - NOT optional
+       	
+     	Account Settings: - 3 dots
+       	Change Pass
+       	Change Pic
+       	Change Display Name
+       	Log out
+       	
