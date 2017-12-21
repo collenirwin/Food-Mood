@@ -1,27 +1,61 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-    <head>
-    <!--
-        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
-        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
-    -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>FoodMood</title>
-    </head>
+<head>
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <title>Food Mood</title>
+</head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <div id="app">
+
+            <div id="titlebar">
+                <!--<button id="back">&#11104;</button>-->
+                <span id="title">Food Mood</span>
+                <button id="search"><span>&#9906;</span></button>
+                <button id="dots">&#8285;</button>
+            </div>
+
+            <div id="content">
+
+                <div class="meal-card">
+
+                    <div class="meal-card-top">
+                        <span class="meal-card-date">5-Nov-17</span>
+                        <img class="meal-card-icon" src="images/cordova.png" />
+                        <span class="meal-card-top-span">
+                            <a href="index.html" class="meal-card-username">Collen</a>
+                        </span>
+                    </div>
+
+                    <img class="meal-card-image" src="images/food.jpeg" />
+
+                    <div class="meal-card-rating-div">
+                        <span class="meal-card-joint">Bubger Kirg</span>
+                        <br />
+
+                        <span class="meal-card-title">
+                            <span>Bacon Cheesed Burger</span>
+                            <span class="meal-card-price">$11.08</span>
+                        </span>
+                        <br />
+                        Rating&nbsp;<span class="meal-card-rating">4</span>&nbsp;/ 5
+                        <br />
+                        <p class="meal-card-comment">It was pretty good but not the best i've ever had</p>
+                        <div class="meal-card-view-joint-div">
+                            <a href="images/cordova.png" class="meal-card-view-joint">View Restaurant Page</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>
         <script type="text/javascript" src="scripts/index.js"></script>

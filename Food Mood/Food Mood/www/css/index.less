@@ -1,0 +1,203 @@
+﻿// colors
+
+@textColorLight: #fff;
+@textColorDark: #555;
+@backColor: #f2f2f2;
+@mainColor: #4d9c6c;
+@linkColor: #8ac5a1;
+
+// sizes
+@titleBarHeight: 50px;
+
+// mixins
+
+.z-4dp
+{
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .4);
+}
+
+.z-2dp
+{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+}
+
+.buttonGreen
+{
+    background: @mainColor;
+    color: @textColorLight;
+    border: 0;
+    box-shadow: 0;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+// style
+
+html, body
+{
+    margin: 0;
+    font-family: roboto, sans-serif;
+    background: @backColor;
+}
+
+#content
+{
+    padding-top: @titleBarHeight;
+    padding-bottom: 20px;
+    color: @textColorDark;
+}
+
+a
+{
+    text-decoration: none;
+    color: @linkColor;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.25s ease;
+}
+
+a:hover, a:active
+{
+    color: darken(@linkColor, 20%);
+}
+
+// titlebar
+
+#titlebar
+{
+    color: @textColorLight;
+    background: @mainColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: @titleBarHeight;
+    line-height: @titleBarHeight;
+    .z-4dp();
+}
+
+#titlebar > button
+{
+    font-size: 1.5em;
+    position: absolute;
+    width: @titleBarHeight;
+    height: @titleBarHeight;
+}
+
+#titlebar > button:hover, #titlebar > button:active
+{
+    background: lighten(@mainColor, 20%);
+}
+
+#title
+{
+    font-size: 1.5em;
+    position: absolute;
+    left: @titleBarHeight;
+}
+
+#back
+{
+    left: 0;
+    .buttonGreen();
+}
+
+#search
+{
+    right: @titleBarHeight;
+    .buttonGreen();
+}
+
+#search > span
+{
+    display: inline-block;
+    transform: rotate(-45deg);
+}
+
+#dots
+{
+    right: 0;
+    .buttonGreen();
+}
+
+// meal card
+
+.meal-card
+{
+    width: 90%;
+    max-width: 90%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: @textColorLight;
+    .z-2dp();
+}
+
+.meal-card-top
+{
+    height: @titleBarHeight;
+}
+
+.meal-card-top-span
+{
+    display: inline-block;
+    white-space: nowrap;
+    line-height: @titleBarHeight;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.meal-card-date
+{
+    float: right;
+    margin-right: 10px;
+    line-height: @titleBarHeight;
+}
+
+.meal-card-icon
+{
+    width: 48px;
+    height: 48px;
+}
+
+.meal-card-image
+{
+    width: 100%;
+    height: auto;
+}
+
+.meal-card-joint
+{
+    font-size: 0.75em;
+}
+
+.meal-card-price
+{
+    float: right;
+}
+
+.meal-card-title
+{
+    font-size: 1.25em;
+}
+
+.meal-card-rating-div
+{
+    padding: 5px;
+}
+
+.meal-card-rating
+{
+    font-weight: 600;
+}
+
+.meal-card-comment
+{
+    overflow-wrap: break-word;
+}
+
+.meal-card-view-joint-div
+{
+    text-align: right;
+}
